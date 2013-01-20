@@ -3,7 +3,6 @@
 
 #include "WPILib.h"
 #include "Robotmap.h"
-#include "Position_Tracking.h"
 
 class Init
 {
@@ -25,6 +24,5 @@ public:
 	DigitalInput *acc_3;
 	DigitalOutput *acc_4;
 	
-	Position_Tracking *grid;
 };
 #endif

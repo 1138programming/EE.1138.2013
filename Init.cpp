@@ -18,5 +18,4 @@ Init::Init()
 	
 	gyro = new Gyro(G_RATE);
 	acc = new ADXL345_SPI(acc_1, acc_2, acc_3, acc_4);
-	grid = new Position_Tracking();
 }
