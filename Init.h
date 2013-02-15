@@ -11,18 +11,30 @@ public:
 	
 	RobotDrive *drive;
 	
-	Victor *leftJag;
-	Victor *rightJag;
+	Victor* leftJag_1;
+	Victor* leftJag_2;
+	Victor* rightJag_1;
+	Victor* rightJag_2;
+	Victor* alt;
+	Victor* vex_turr;
 	
-	Encoder *encoder;
+	I2C* vex_393;
 	
-	Gyro *gyro;
-	ADXL345_SPI *acc;
+	Encoder* d_encoder;
+	Encoder* vex_enc;
 	
-	DigitalOutput *acc_1;
-	DigitalOutput *acc_2;
-	DigitalInput *acc_3;
-	DigitalOutput *acc_4;
+	Gyro* gyro;
+	ADXL345_SPI* acc;
+	
+	DigitalOutput* acc_1;
+	DigitalOutput* acc_2;
+	DigitalInput* acc_3;
+	DigitalOutput* acc_4;
+	
+	NetworkTable* table;
+	
+	double x;
+	bool isTargeting;
 	
 };
 #endif

@@ -1,19 +1,18 @@
-#ifndef DRIVEWITHJOYSTICKS_H_
-#define DRIVEWITHJOYSTICKS_H_
+#ifndef SHOOTER_OFF_H_
+#define SHOOTER_OFF_H_
 
 #include "../CommandBase.h"
 #include "../Print.h"
 #include "../Init.h"
-#include "../I2CEncoder/IEC.h"
 
-class DriveWithJoysticks: public CommandBase 
+class ShooterOFF: public CommandBase 
 {
 private:
 	Print *print;
 	Init *init;
-	IEC* iec;
+	char y;
 public:
-	DriveWithJoysticks(Print *pr, Init *i);
+	ShooterOFF(Print *pr, Init *i, char x);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

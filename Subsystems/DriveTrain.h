@@ -1,26 +1,23 @@
 #ifndef DRIVETRAIN_H
 #define DRIVETRAIN_H
-#include "Commands/PIDSubsystem.h"
+#include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include "../Init.h"
 #include "../Robotmap.h"
 #include "../Print.h"
 
 
-class DriveTrain: public PIDSubsystem {
+class DriveTrain: public Subsystem {
 private:
 	static const double DRIVEMOTORS = 1000.00;
-	RobotDrive *drive;
-	Victor *left;
-	Victor *right;
-	Init *init;
-	Print *print;
+	Init* init;
+	Print* print;
+	double _speed;
 public:
 	DriveTrain(Init *i, Print *pr);
 	void InitDefaultCommand();
-	double ReturnPIDInput();
-	void UsePIDOutput(double output);
-	void TankDrive(double left, double right);
+	void TankDrive(double left, double right, double third);
+	void SetEncoderMotor(double speed);
 };
 
 #endif

@@ -1,19 +1,17 @@
-#ifndef DRIVEWITHJOYSTICKS_H_
-#define DRIVEWITHJOYSTICKS_H_
+#ifndef TURNTURRET_H_
+#define TURNTURRET_H_
 
 #include "../CommandBase.h"
 #include "../Print.h"
 #include "../Init.h"
-#include "../I2CEncoder/IEC.h"
 
-class DriveWithJoysticks: public CommandBase 
+class TurnTurret: public CommandBase 
 {
 private:
 	Print *print;
 	Init *init;
-	IEC* iec;
 public:
-	DriveWithJoysticks(Print *pr, Init *i);
+	TurnTurret(Print *pr, Init *i);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

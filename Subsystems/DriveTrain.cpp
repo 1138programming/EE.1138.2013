@@ -1,20 +1,19 @@
 #include "DriveTrain.h"
 #include "../Commands/DriveWithJoysticks.h"
 
-DriveTrain::DriveTrain(Init *i, Print *pr) : PIDSubsystem("DriveTrain", 3.5, 0.4, 0.1) {
-	GetPIDController()->SetContinuous(false);
+DriveTrain::DriveTrain(Init *i, Print *pr) : Subsystem("DriveTrain") {
 	init = i;
 	print = pr;
-	init->drive->SetSafetyEnabled(false);
-	SetAbsoluteTolerance(.05);
-	SetSetpoint(DRIVEMOTORS);
-	if(!A_DEBUG)
-		Enable();
 }
     
-void DriveTrain::TankDrive(double left, double right)
+void DriveTrain::TankDrive(double left, double right, double third)
 {
 	init->drive->TankDrive(left, right);
+	//init->vex_turr->Set(left); //one of the vex motors
+	//init->leftJag_1->Set(left);
+	//init->leftJag_2->Set(right);
+	//print->Write("", float(init->vex_enc->GetDistance()), 1);
+	//printf("...%f\n", left);
 }
 
 void DriveTrain::InitDefaultCommand()
@@ -22,19 +21,7 @@ void DriveTrain::InitDefaultCommand()
 	SetDefaultCommand(new DriveWithJoysticks(print, init));
 }
 
-double DriveTrain::ReturnPIDInput()
+void DriveTrain::SetEncoderMotor(double speed)
 {
-	if((init->encoder->GetDistance() >= (DRIVEMOTORS - 10)) && (init->encoder->GetDistance() <= (DRIVEMOTORS + 10)))
-	{
-		Disable();
-		SetCurrentCommand(new DriveWithJoysticks(print, init));
-		return 0;
-	}
-	return init->encoder->GetDistance();
-}
-
-void DriveTrain::UsePIDOutput(double output)
-{
-	init->rightJag->Set(-output);
-	init->leftJag->Set(output);
+	init->leftJag_1->Set(speed);
 }
