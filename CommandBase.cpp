@@ -13,6 +13,7 @@ OI* CommandBase::oi = NULL;
 Print* CommandBase::print = NULL;
 Shooter* CommandBase::shooter = NULL;
 Turret* CommandBase::turret = NULL;
+Altitude* CommandBase::altitude = NULL;
 
 void CommandBase::init(Init* init, Print* pr) {
     // Create a single static instance of all of your subsystems. The following
@@ -25,4 +26,5 @@ void CommandBase::init(Init* init, Print* pr) {
 	oi = new OI(print, initialize);
 	shooter = new Shooter(initialize, print);
 	turret = new Turret(initialize, print);
+	altitude = new Altitude(initialize, print);
 }

@@ -3,6 +3,10 @@
 #include "Commands/Speed.h"
 #include "Commands/ShooterON.h"
 #include "Commands/ShooterOFF.h"
+#include "Commands/StartMotors.h"
+#include "Commands/StopMotors.h"
+#include "Commands/ToggleTracking.h"
+#include "Commands/TurnTurret.h"
 
 OI::OI(Print *p, Init *i) {
 	print = p;
@@ -15,30 +19,22 @@ OI::OI(Print *p, Init *i) {
 	ltrigger = new JoystickButton(left, 1);
 	rtrigger = new JoystickButton(right, 1);
 	
-	r_q_7 = new JoystickButton(right, 7);
-	r_h_8 = new JoystickButton(right, 8);
-	r_th_9 = new JoystickButton(right, 9);
-	r_full_10 = new JoystickButton(right, 10);
-	l_q_7 = new JoystickButton(left, 7);
-	l_h_8 = new JoystickButton(left, 8);
-	l_th_9 = new JoystickButton(left, 9);
-	l_full_10 = new JoystickButton(left, 10);
+	t_q_7 = new JoystickButton(third, 7);
+	t_h_8 = new JoystickButton(third, 8);
+	t_th_9 = new JoystickButton(third, 9);
+	t_full_10 = new JoystickButton(third, 10);
+	
+	Track_Toggle = new JoystickButton(third, 2);
+	t_tur_3 = new JoystickButton(third, 3);
 	
 	
-	/*r_q_7->WhenPressed(new Speed(S25, 'r'));
-	r_h_8->WhenPressed(new Speed(S50, 'r'));
-	r_th_9->WhenPressed(new Speed(S75, 'r'));
-	r_full_10->WhenPressed(new Speed(S10, 'r'));
-	l_q_7->WhenPressed(new Speed(S25, 'l'));
-	l_h_8->WhenPressed(new Speed(S50, 'l'));
-	l_th_9->WhenPressed(new Speed(S75, 'l'));
-	l_full_10->WhenPressed(new Speed(S10, 'l'));
+	t_q_7->WhenPressed(new Speed(S25));
+	t_h_8->WhenPressed(new Speed(S50));
+	t_th_9->WhenPressed(new Speed(S75));
+	t_full_10->WhenPressed(new Speed(S10));
 	
-	ltrigger->WhileHeld(new ShooterON(print, init, 'l'));
-	ltrigger->WhenReleased(new ShooterOFF(print, init, 'l'));
-	rtrigger->WhileHeld(new ShooterON(print, init, 'r'));
-	rtrigger->WhenReleased(new ShooterOFF(print, init, 'r'));*/
-	
+	Track_Toggle->WhenPressed(new ToggleTracking(print, init));
+	t_tur_3->WhileHeld(new TurnTurret(print, init));
 }
 
 float OI::GetLeftY()
@@ -59,4 +55,9 @@ float OI::GetThirdY()
 float OI::GetThirdZ()
 {
 	return third->GetZ();
+}
+
+bool OI::GetTurretTrigger()
+{
+	return t_tur_3->Get();
 }

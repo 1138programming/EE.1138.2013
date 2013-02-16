@@ -10,9 +10,8 @@ class ShooterOFF: public CommandBase
 private:
 	Print *print;
 	Init *init;
-	char y;
 public:
-	ShooterOFF(Print *pr, Init *i, char x);
+	ShooterOFF(Print *pr, Init *i);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

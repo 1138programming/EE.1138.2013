@@ -13,5 +13,5 @@ void Turret::InitDefaultCommand()
 
 void Turret::Turn(float speed)
 {
-	//init->vex_turr->Set(speed);
+	init->vex_turr->Set(speed);
 }

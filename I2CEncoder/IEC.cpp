@@ -1,7 +1,7 @@
 #include "IEC.h"
 
 IEC::IEC() {
-//	Init_I2C();
+	Init_I2C();
 }
 
 void IEC::Init_I2C() {

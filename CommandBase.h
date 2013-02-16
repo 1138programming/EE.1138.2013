@@ -6,6 +6,7 @@
 #include "Subsystems/DriveTrain.h"
 #include "Subsystems/Shooter.h"
 #include "Subsystems/Turret.h"
+#include "Subsystems/Altitude.h"
 #include "OI.h"
 #include "Init.h"
 #include "Print.h"
@@ -28,6 +29,7 @@ public:
 	static Print* print;
 	static Shooter* shooter;
 	static Turret* turret;
+	static Altitude* altitude;
 };
 
 #endif

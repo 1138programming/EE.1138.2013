@@ -22,7 +22,7 @@ void Eagles::TeleopInit() {
 	// teleop starts running. If you want the autonomous to 
 	// continue until interrupted by another command, remove
 	// this line or comment it out.
-	init->d_encoder->Reset();
+	init->e_alt->Reset();
 }
 
 void Eagles::TeleopPeriodic() {
@@ -32,7 +32,7 @@ void Eagles::TeleopPeriodic() {
 void Eagles::DisabledInit()
 {
 	printf("Disabled!\n");
-	init->d_encoder->Stop();
+	init->e_alt->Stop();
 	init->isTargeting = false;
 	init->drive->StopMotor();
 }

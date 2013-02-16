@@ -9,14 +9,14 @@ PIDControl::PIDControl(Print *pr, Init *i) {
 
 // Called just before this Command runs the first time
 void PIDControl::Initialize() {
-	drivetrain->TankDrive(oi->GetLeftY(), oi->GetRightY(), oi->GetThirdY());
+	drivetrain->TankDrive(oi->GetLeftY(), oi->GetRightY());
 }
 
 // Called repeatedly when this Command is scheduled to run
 void PIDControl::Execute() {
-	if(init->d_encoder->GetDistance() != 0.000000)
+	if(init->e_alt->GetDistance() != 0.000000)
 		
-	drivetrain->TankDrive(oi->GetLeftY(), oi->GetRightY(), oi->GetThirdY());
+	drivetrain->TankDrive(oi->GetLeftY(), oi->GetRightY());
 }
 
 // Make this return true when this Command no longer needs to run execute()

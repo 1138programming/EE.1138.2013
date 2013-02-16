@@ -2,17 +2,19 @@
 #define ROBOTMAP_H
 
 /* Victors */
-#define LEFT1 1 
-#define LEFT2 2
-#define RIGHT1 7
-#define RIGHT2 9
-#define VTURR 4
-#define ALT 5
+#define LEFT 1
+#define RIGHT 2
+#define VTURR 9
+#define ALT 4
 
 /* Joysticks */
 #define JRIGHT 2
 #define JLEFT 1
 #define JTHIRD 3
+
+/* Encoders */
+#define E_ALT1 7
+#define E_ALT2 8
 
 /* Sonar */
 #define ANALOG 1

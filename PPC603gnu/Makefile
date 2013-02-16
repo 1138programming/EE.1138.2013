@@ -166,6 +166,10 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Comm
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/AltMotors.o : $(PRJ_ROOT_DIR)/Commands/AltMotors.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/DriveWithJoysticks.o : $(PRJ_ROOT_DIR)/Commands/DriveWithJoysticks.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -183,6 +187,18 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Comm
 
 
 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/Speed.o : $(PRJ_ROOT_DIR)/Commands/Speed.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/StartMotors.o : $(PRJ_ROOT_DIR)/Commands/StartMotors.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/StopMotors.o : $(PRJ_ROOT_DIR)/Commands/StopMotors.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
+CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ToggleTracking.o : $(PRJ_ROOT_DIR)/Commands/ToggleTracking.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
@@ -214,6 +230,10 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Prin
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
 
+CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Altitude.o : $(PRJ_ROOT_DIR)/Subsystems/Altitude.cpp $(FORCE_FILE_BUILD)
+	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
+
+
 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/DriveTrain.o : $(PRJ_ROOT_DIR)/Subsystems/DriveTrain.cpp $(FORCE_FILE_BUILD)
 	$(TRACE_FLAG)if [ ! -d "`dirname "$@"`" ]; then mkdir -p "`dirname "$@"`"; fi;echo "building $@"; $(TOOL_PATH)ccppc $(DEBUGFLAGS_C++-Compiler) $(CC_ARCH_SPEC) -ansi -Wall  -MD -MP -mlongcall $(ADDED_C++FLAGS) $(IDE_INCLUDES) $(ADDED_INCLUDES) -DCPU=$(CPU) -DTOOL_FAMILY=$(TOOL_FAMILY) -DTOOL=$(TOOL) -D_WRS_KERNEL   $(DEFINES) -o "$@" -c "$<"
 
@@ -227,11 +247,15 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subs
 
 
 OBJECTS_CommandBasedRobotTemplate_partialImage = CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/CommandBase.o \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/AltMotors.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/DriveWithJoysticks.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/PIDControl.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ShooterOFF.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ShooterON.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/Speed.o \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/StartMotors.o \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/StopMotors.o \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ToggleTracking.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/TurnTurret.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/CustomPID.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Eagles.o \
@@ -239,6 +263,7 @@ OBJECTS_CommandBasedRobotTemplate_partialImage = CommandBasedRobotTemplate_parti
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Init.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/OI.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Print.o \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Altitude.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/DriveTrain.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Shooter.o \
 	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Turret.o
@@ -255,12 +280,13 @@ CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/CommandBasedRobotTemplate_par
 
 force : 
 
-DEP_FILES := CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/CommandBase.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/DriveWithJoysticks.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/PIDControl.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ShooterOFF.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ShooterON.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/Speed.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/TurnTurret.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/CustomPID.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Eagles.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/I2CEncoder/IEC.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Init.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/OI.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Print.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/DriveTrain.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Shooter.d \
-	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Turret.d
+DEP_FILES := CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/CommandBase.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/AltMotors.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/DriveWithJoysticks.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/PIDControl.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ShooterOFF.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ShooterON.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/Speed.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/StartMotors.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/StopMotors.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/ToggleTracking.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Commands/TurnTurret.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/CustomPID.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Eagles.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/I2CEncoder/IEC.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Init.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/OI.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Print.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Altitude.d \
+	 CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/DriveTrain.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Shooter.d CommandBasedRobotTemplate_partialImage/$(MODE_DIR)/Objects/2013.COMMAND_0.1/Subsystems/Turret.d
 -include $(DEP_FILES)
 
 

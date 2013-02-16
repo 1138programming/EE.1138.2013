@@ -1,5 +1,5 @@
-#ifndef SHOOTER_H
-#define SHOOTER_H
+#ifndef ALTITUDE_H_
+#define ALTITUDE_H_
 #include "Commands/Subsystem.h"
 #include "WPILib.h"
 #include "../Init.h"
@@ -7,17 +7,14 @@
 #include "../Print.h"
 
 
-class Shooter: public Subsystem {
+class Altitude: public Subsystem {
 private:
 	Init* init;
 	Print* print;
 public:
-	Shooter(Init *i, Print *pr);
+	Altitude(Init *i, Print *pr);
 	void InitDefaultCommand();
-	void Set();
-	void Off();
-	void Set_Speed(float given_speed);
-	double speed;
+	void Move(float speed);
 };
 
 #endif

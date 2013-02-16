@@ -1,14 +1,17 @@
-#ifndef SPEED_H
-#define SPEED_H
+#ifndef ALTMOTORS_H_
+#define ALTMOTORS_H_
 
 #include "../CommandBase.h"
+#include "../Print.h"
+#include "../Init.h"
 
-class Speed: public CommandBase 
+class AltMotors: public CommandBase 
 {
 private:
-	float speed;
+	Print *print;
+	Init *init;
 public:
-	Speed(float given);
+	AltMotors(Print *pr, Init *i);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

@@ -16,7 +16,7 @@ private:
 public:
 	DriveTrain(Init *i, Print *pr);
 	void InitDefaultCommand();
-	void TankDrive(double left, double right, double third);
+	void TankDrive(double left, double right);
 	void SetEncoderMotor(double speed);
 };
 

@@ -4,16 +4,12 @@
 DriveTrain::DriveTrain(Init *i, Print *pr) : Subsystem("DriveTrain") {
 	init = i;
 	print = pr;
+	print->Write("DISABLED", 1);
 }
     
-void DriveTrain::TankDrive(double left, double right, double third)
+void DriveTrain::TankDrive(double left, double right)
 {
 	init->drive->TankDrive(left, right);
-	//init->vex_turr->Set(left); //one of the vex motors
-	//init->leftJag_1->Set(left);
-	//init->leftJag_2->Set(right);
-	//print->Write("", float(init->vex_enc->GetDistance()), 1);
-	//printf("...%f\n", left);
 }
 
 void DriveTrain::InitDefaultCommand()
@@ -23,5 +19,5 @@ void DriveTrain::InitDefaultCommand()
 
 void DriveTrain::SetEncoderMotor(double speed)
 {
-	init->leftJag_1->Set(speed);
+	init->leftJag->Set(speed);
 }

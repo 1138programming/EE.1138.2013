@@ -9,12 +9,19 @@ TurnTurret::TurnTurret(Print *pr, Init *i) {
 
 // Called just before this Command runs the first time
 void TurnTurret::Initialize() {
-	turret->Turn(oi->GetThirdY());
 }
 
 // Called repeatedly when this Command is scheduled to run
 void TurnTurret::Execute() {
-	turret->Turn(oi->GetThirdZ());
+	if(init->isTargeting)
+	{
+		// read and track
+		return;
+	}
+	if(oi->third->GetRawButton(3))
+		turret->Turn(oi->GetThirdZ());
+	else
+		turret->Turn(0.0);
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -24,7 +31,6 @@ bool TurnTurret::IsFinished() {
 
 // Called once after isFinished returns true
 void TurnTurret::End() {
-	
 }
 
 // Called when another command which requires one or more of the same

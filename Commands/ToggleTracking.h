@@ -1,17 +1,17 @@
-#ifndef SHOOTER_ON_H_
-#define SHOOTER_ON_H_
+#ifndef TOGGLETRACKING_H_
+#define TOGGLETRACKING_H_
 
 #include "../CommandBase.h"
 #include "../Print.h"
 #include "../Init.h"
 
-class ShooterON: public CommandBase 
+class ToggleTracking: public CommandBase 
 {
 private:
 	Print *print;
 	Init *init;
 public:
-	ShooterON(Print *pr, Init *i);
+	ToggleTracking(Print *pr, Init *i);
 	virtual void Initialize();
 	virtual void Execute();
 	virtual bool IsFinished();

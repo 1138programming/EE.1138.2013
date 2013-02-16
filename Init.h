@@ -3,6 +3,7 @@
 
 #include "WPILib.h"
 #include "Robotmap.h"
+#include "I2CEncoder/IEC.h"
 
 class Init
 {
@@ -11,16 +12,14 @@ public:
 	
 	RobotDrive *drive;
 	
-	Victor* leftJag_1;
-	Victor* leftJag_2;
-	Victor* rightJag_1;
-	Victor* rightJag_2;
+	Victor* leftJag;
+	Victor* rightJag;
 	Victor* alt;
 	Victor* vex_turr;
 	
-	I2C* vex_393;
+	IEC* vex_iec;
 	
-	Encoder* d_encoder;
+	Encoder* e_alt;
 	Encoder* vex_enc;
 	
 	Gyro* gyro;
